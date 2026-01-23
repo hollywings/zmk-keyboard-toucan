@@ -2,11 +2,6 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-/* Completely disable ALL trackpad nodes */
-&glidepoint_split { status = "disabled"; };
-&glidepoint_listener { status = "disabled"; };
-&glidepoint { status = "disabled"; };
-
 &xiao_i2c {
     status = "disabled";
 };
