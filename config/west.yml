@@ -22,7 +22,7 @@ manifest:
       path: modules/zmk-dongle-screen-engine
     - name: zdse-themes
       remote: hitsmaxft
-      revision: v1.0.0
+      revision: main
       path: modules/zdse-themes
   self:
     path: config
