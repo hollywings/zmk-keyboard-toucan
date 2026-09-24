@@ -1,11 +1,11 @@
 #include <zephyr/kernel.h>
 #include <lvgl.h>
 
-LV_IMG_DECLARE(toucan128);
+LV_IMAGE_DECLARE(toucan128);
 
 void setup_status_screen(lv_obj_t *screen) {
-    lv_obj_t *img = lv_img_create(screen);
-    lv_img_set_src(img, &toucan128);
+    lv_obj_t *img = lv_image_create(screen);
+    lv_image_set_src(img, &toucan128);
     lv_obj_center(img);
 }
 
