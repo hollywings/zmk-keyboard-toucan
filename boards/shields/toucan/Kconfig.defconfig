@@ -23,6 +23,14 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
 
+# Fetch peripheral battery levels via the standard Bluetooth Battery Service (BAS).
+# The peripheral halves expose their battery level via the BAS GATT characteristic
+# (enabled by CONFIG_ZMK_BATTERY_REPORTING). The central must opt in to fetching
+# those levels to raise zmk_peripheral_battery_state_changed events, which the
+# dongle screen engine subscribes to. Without this, both batteries render empty.
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+    default y
+
 endif
 
 if SHIELD_TOUCAN_LEFT
