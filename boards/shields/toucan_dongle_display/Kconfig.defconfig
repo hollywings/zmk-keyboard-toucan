@@ -1,0 +1,17 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_TOUCAN_DONGLE_DISPLAY
+
+# The engine renderer writes RGB565 directly through the display driver.
+choice ST7789V_PIXEL_FORMAT
+    default ST7789V_RGB565
+endchoice
+
+config PWM
+    default y
+
+config LED
+    default y
+
+endif

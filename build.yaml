@@ -19,13 +19,14 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: toucan_dongle rgbled_adapter dongle_screen
+  - board: xiao_ble/nrf52840/zmk
+    shield: toucan_dongle rgbled_adapter toucan_dongle_display dongle_screen_host
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: seeeduino_xiao_ble
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZDSE_NEON_CAT_THEME=y -DCONFIG_ZMK_DONGLE_SCREEN_DIRECT_RGB565=y -DCONFIG_ZMK_DONGLE_SCREEN_FPS=60
+    artifact-name: toucan_dongle_neon_cat
+  - board: xiao_ble/nrf52840/zmk
     shield: toucan_left rgbled_adapter toucan_pet
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: toucan_right rgbled_adapter
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble/nrf52840/zmk
     shield: settings_reset

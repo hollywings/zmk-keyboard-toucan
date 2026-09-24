@@ -1,0 +1,8 @@
+file_format: "1"
+id: toucan_dongle_display
+name: Toucan Dongle Display
+type: shield
+url: https://github.com/hollywings/zmk-keyboard-toucan
+requires: [seeed_xiao]
+features:
+  - display

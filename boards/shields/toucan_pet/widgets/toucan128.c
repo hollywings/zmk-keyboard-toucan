@@ -148,12 +148,15 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_TOUCAN128
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-const lv_img_dsc_t toucan128 = {
-  .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .header.always_zero = 0,
-  .header.reserved = 0,
-  .header.w = 128,
-  .header.h = 128,
-  .data_size = 2056,
-  .data = toucan128_map,
+const lv_image_dsc_t toucan128 = {
+    .header =
+        {
+            .magic = LV_IMAGE_HEADER_MAGIC,
+            .cf = LV_COLOR_FORMAT_I1,
+            .w = 128,
+            .h = 128,
+            .stride = 16,
+        },
+    .data_size = sizeof(toucan128_map),
+    .data = toucan128_map,
 };

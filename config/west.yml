@@ -1,27 +1,28 @@
 manifest:
   defaults:
-    revision: v0.3
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: petejohanson
-      url-base: https://github.com/petejohanson/
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: bwshockley
-      url-base: https://github.com/bwshockley
+    - name: hitsmaxft
+      url-base: https://github.com/hitsmaxft
   projects:
     - name: zmk
       remote: zmkfirmware
-      import: app/west.yml
-    - name: cirque-input-module
-      remote: petejohanson
       revision: main
+      import: app/west.yml
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: main    
-    - name: zmk-dongle-screen
-      remote: bwshockley
       revision: main
+    - name: zmk-dongle-screen-engine
+      remote: hitsmaxft
+      revision: v1.4.1
+      path: modules/zmk-dongle-screen-engine
+    - name: zdse-themes
+      remote: hitsmaxft
+      revision: main
+      path: modules/zdse-themes
   self:
     path: config
